@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.transparent-header {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px; /* Поля для содержимого */
+    background-color: rgba(53, 134, 255); /* Полупрозрачный фон */
+    display: flex;
+    justify-content: space-between; /* Разделение содержимого */
+    align-items: center; /* Вертикальное выравнивание */
+    font-family: 'Poppins', sans-serif; /* Шрифт */
+    z-index: 1000; /* Убедитесь, что хэдер выше других элементов */
+}
+
+.navbar-menu-header,
+.navbar-auth-header {
+    list-style: none; /* Удаление маркеров списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Горизонтальное выравнивание */
+}
+
+.navbar-menu-header li,
+.navbar-auth-header li {
+    margin-right: 20px; /* Отступы между элементами */
+}
+
+.navbar-menu-header a,
+.navbar-auth-header a,
+.btn-link-header {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-link-header {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-link-header:hover,
+.navbar-menu-header a:hover,
+.navbar-auth-header a:hover {
+    color: #a0a0a0; /* Цвет при наведении */
+}

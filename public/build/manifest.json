@@ -1,0 +1,34 @@
+{
+  "_axios-upsvKRUO.js": {
+    "file": "assets/axios-upsvKRUO.js",
+    "name": "axios"
+  },
+  "resources/assets/css/app.css": {
+    "file": "assets/app-CmgVh1bs.css",
+    "src": "resources/assets/css/app.css",
+    "isEntry": true
+  },
+  "resources/assets/js/app.js": {
+    "file": "assets/app-DFTR-mQD.js",
+    "name": "app",
+    "src": "resources/assets/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-upsvKRUO.js"
+    ]
+  },
+  "resources/assets/js/bootstrap.js": {
+    "file": "assets/bootstrap-DeQrA2Ni.js",
+    "name": "bootstrap",
+    "src": "resources/assets/js/bootstrap.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-upsvKRUO.js"
+    ]
+  },
+  "resources/assets/scss/app.scss": {
+    "file": "assets/app-BRWUyo1a.css",
+    "src": "resources/assets/scss/app.scss",
+    "isEntry": true
+  }
+}

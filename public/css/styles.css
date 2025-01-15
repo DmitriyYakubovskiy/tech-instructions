@@ -1,0 +1,85 @@
+.main {
+    flex: 1 0 auto;
+    padding-top: 80px;
+}
+
+*{
+    margin: 0;/*обнуление отступов*/
+    padding: 0;/*обнуление полей*/
+    box-sizing: border-box;/*метод расчета размеров бокса*/
+    font-family: 'Poppins', sans-serif;/*название шрифта*/
+}
+
+body {
+    display: flex;/*флексбокс сетка*/
+    flex-direction: column;/*направление главной оси*/
+    justify-content: flex-end;/*элементы в конце контейнера*/
+    min-height: 100vh;
+}
+
+.login-form {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 20px auto; /* Центрирование формы */
+    padding: 20px; /* Поля внутри формы */
+    background-color: #fff; /* Фон формы */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+}
+
+.registration-form {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 20px auto; /* Центрирование формы */
+    padding: 20px; /* Поля внутри формы */
+    background-color: #fff; /* Фон формы */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Отступ между полями */
+}
+
+.form-group label {
+    display: block; /* Блочный элемент для метки */
+    margin-bottom: 5px; /* Отступ под меткой */
+}
+
+.form-group input {
+    width: 100%; /* Ширина поля ввода на всю ширину родителя */
+    padding: 10px; /* Поля внутри поля ввода */
+    border: 1px solid #ccc; /* Цвет рамки поля ввода */
+    border-radius: 4px; /* Закругление углов поля ввода */
+}
+
+.btn-link {
+    background-color: #3586ff; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    padding: 10px 15px; /* Поля внутри кнопки */
+    border: none; /* Без рамки */
+    border-radius: 4px; /* Закругление углов кнопки */
+    cursor: pointer; /* Курсор при наведении на кнопку */
+}
+
+.btn-link:hover {
+    background-color: #2a6bbf; /* Темнее при наведении */
+}
+
+.custom-container {
+    background-color: white; /* Цвет фона контейнера */
+    border: 1px solid #dee2e6; /* Обводка контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    padding: 20px; /* Внутренние отступы */
+}
+
+.custom-card {
+    background-color: white; /* Цвет фона карточки */
+    padding: 20px; /* Отступы внутри карточки */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    border: 1px solid #dee2e6; /* Обводка карточки */
+}
+
+.text-muted {
+    color: rgba(0, 0, 0, 0.6); /* Цвет текста для описания */
+}

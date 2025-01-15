@@ -1,0 +1,4 @@
+{
+    "intelephense.environment.phpVersion": "8.4.2",
+    "intelephense.compatibility.preferPsalmPhpstanPrefixedAnnotations": false
+}

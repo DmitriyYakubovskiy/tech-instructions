@@ -1,0 +1,21 @@
+.login-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: calc(100vh - 120px); /* Учитываем высоту header и footer */
+    padding: 20px;
+    background-color: #f8f9fa; /* Цвет фона страницы входа */
+}
+
+.login-form {
+    background-color: white; /* Цвет фона формы */
+    padding: 30px;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина формы */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Отступы между элементами формы */
+}
