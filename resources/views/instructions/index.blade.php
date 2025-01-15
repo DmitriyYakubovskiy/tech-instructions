@@ -16,7 +16,7 @@
             <div class="mb-4">
                 <a href="{{ route('instructions.create') }}" class="btn btn-success">Добавить инструкцию</a>
             </div>
-        @endif
+        @endauth
     </div>
 
     @if ($instructions->isEmpty())
@@ -26,13 +26,15 @@
             @foreach ($instructions as $instruction)
                 <div class="col-md-4 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset($instruction->icon_path) }}" alt="{{ $instruction->title }} иконка" class="card-img-top" style="width: 100%; height: 350px; object-fit: cover;">
+                        <img src="{{ asset($instruction->icon_path) }}" alt="{{ $instruction->title }} иконка" class="card-img-top" style="width: 100%; height: 100%; object-fit: cover;">
 
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">
                                 <a href="{{ route('instructions.show', $instruction) }}" class="text-primary">{{ $instruction->title }}</a>
                             </h5>
+                            <p class="card-text"><small class="text-muted">Автор: {{ $instruction->user->name }} ({{ $instruction->user->email }})</small></p>
                             <p class="card-text text-muted">{{ Str::limit($instruction->content, 40) }}</p>
+
                         </div>
 
                         <form action="{{ route('instructions.destroy', $instruction) }}" method="POST" class="m-3">

@@ -10,14 +10,12 @@ return new class extends Migration
     {
         Schema::table('instructions', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->after('id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
     public function down()
     {
         Schema::table('instructions', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
         });
     }

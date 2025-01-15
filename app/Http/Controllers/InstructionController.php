@@ -29,11 +29,12 @@ class InstructionController extends Controller
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
-                'file' => 'required|file|mimes:jpeg,pdf,jpg,png|max:2048',
-                'icon' => 'required|file|mimes:jpeg,jpg,png|max:2048',
+                'file' => 'required|file|mimes:jpeg,pdf,jpg,png|max:20480',
+                'icon' => 'required|file|mimes:jpeg,jpg,png|max:20480',
             ]);
 
             $instruction = new Instruction($request->all());
+            $instruction->user_id = Auth::id();
 
             if ($request->hasFile('file')) {
                 $fileName = uniqid('instruction_', true) . '.' . $request->file('file')->getClientOriginalExtension();

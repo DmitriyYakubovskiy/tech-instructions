@@ -30,7 +30,7 @@
             <button type="submit" class="btn btn-success">Отправить на утверждение</button>
         </form>
 
-        <div id="message" class="mt-3"></div>
+        <div id="error-messages" class="mt-3"></div>
     </div>
 </div>
 
@@ -57,16 +57,24 @@ $('.form').on('submit',function(event){
             console.log('Успешно')
             window.location = '/';
         },
-        error: function(xhr) {
-            console.log(xhr);
-            var errors = xhr.responseJSON.errors;
-            console.log(errors);
-            var errorMessage = '<p class="text-danger">Пожалуйста, исправьте следующие ошибки:</p><ul>';
-            $.each(errors, function(key, value) {
-                errorMessage += '<li>' + value[0] + '</li>';
-            });
-            errorMessage += '</ul>';
-            $('#message').html(errorMessage);
+        error: function(err) {
+            console.log(err.responseJSON);
+                $('#error-messages').empty();
+
+                if (err.responseJSON.errors) {
+                    $.each(err.responseJSON.errors, function(i, error) {
+                        $('#error-messages').append('<div class="alert alert-danger">'+ error[0] +'</div>');
+                    });
+                }
+                else if (err.status === 422) {
+                    $.each(err.responseJSON.errors, function(field, messages) {
+                        messages.forEach(function(message) {
+                            $('#error-messages').append('<div class="alert alert-danger">' + message + '</div>');
+                        });
+                    });
+                } else {
+                    $('#error-messages').append('<div class="alert alert-danger">Неверные данные.</div>');
+                }
         }
     });
 });

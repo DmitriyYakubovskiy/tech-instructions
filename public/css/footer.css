@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 footer{
-    position: relative;/*относительное позиционирование*/
-    width: 100%;/*на всю ширину*/
-    padding: 12px 12px 0 0;/*поля для контента*/
-    background: #3586ff;/*цвет футера*/
+    position: relative;
+    width: 100%;
+    padding: 12px 12px 0 0;
+    background: #3586ff;
     display: flex;
-    justify-content: center;/*в центре по горизонтали*/
-    align-items: center;/*в центре по вертикали*/
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .social,
@@ -18,27 +18,27 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 10px 0;
-    flex-wrap: wrap;/*разрешен перенос на новую строку*/
+    flex-wrap: wrap;
 }
 
 .social li,
 .menu li{
-    list-style: none;/*удалить черные маркеры*/
+    list-style: none;
 }
 .social li a {
-    font-size: 2em;/*размер иконок*/
-    color: #fff;/*цвет иконок*/
+    font-size: 2em;
+    color: #fff;
     margin: 0 10px;
-    display: inline-block;/*отображать как строчно-блочный элемент*/
-    transition: 0.5s;/*плавный переход*/
+    display: inline-block;
+    transition: 0.5s;
 }
 
 .menu li a {
-    font-size: 1.2em;/*размер ссылок меню*/
-    color: #fff;/*цвет ссылок меню*/
-    opacity: 0.75;/*значение прозрачности*/
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
     margin: 0 12px;
-    text-decoration: none;/*ссылка без подчеркивания*/
+    text-decoration: none;
 
     display: inline-block;
 }
@@ -53,6 +53,6 @@ footer p {
 }
 
 .social li a:hover {
-    color: #a0a0a0; /* Цвет при наведении */
+    color: #a0a0a0;
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container custom-container mt-4"> <!-- Добавлен класс для обводки -->
+<div class="container custom-container mt-4">
     <div class="container custom-container">
         <h2>Профиль пользователя</h2>
 
@@ -27,7 +27,7 @@
                             <li class="list-group-item" data-id="{{ $instruction->id }}">
                                 <meta name="csrf-token" content="{{ csrf_token() }}">
                                 {{ $instruction->title }}
-                                <button type="button" class="btn btn-success btn-sm approve-btn">Одобрить</button>
+                                <button type="button" class="btn btn-success btn-sm approve-btn ml-3">Одобрить</button>
                             </li>
                         @endforeach
                     </ul>
